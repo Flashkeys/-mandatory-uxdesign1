@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>UX_labb</title>
+  <link rel="stylesheet" href="mds.css">
+  <script src="mds.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Text Field</h1>
+    <div class="mds-text-field">
+      <input class="mds-text-field__input" type="text">
+      <span class="mds-text-field__input--underline"></span>
+      <label class="mds-text-field__label">Text:</label>
+    </div>
+
+    <h1>Switch</h1>
+    <div class="mds-switch">
+      <label class="mds-switch__label">
+        <input class="mds-switch__checkbox" type="checkbox" checked="checked">
+        <span class="mds-switch__slider"></span>
+      </label>
+    </div>
+
+    <section></section>
+
+    <h1>Check Blox</h1>
+    <label class="mds-checkbox">
+      <input type="checkbox" class="mds-checkbox__input" checked="checked">
+      <span class="mds-checkbox__span"></span>
+    </label>
+    
+    <section></section>
+
+    <h1>Radio Battons</h1>
+    <label class="mds-radio">
+      <input type="radio" checked="checked" name="radio" class="mds-radio__input">
+      <span class="mds-radio__span"></span>
+    </label>
+
+    <section></section>
+
+    <label class="mds-radio">
+      <input type="radio" checked="checked" name="radio" class="mds-radio__input">
+      <span class="mds-radio__span"></span>
+    </label>
+
+    <section></section>
+
+    <button id="activate_btn">Activate</button>
+    <button id="disable_btn">Disable</button>
+  </main>
+
+  <script>
+    mds.textField(document.querySelector('.mds-text-field'));
+</script>
+</body>
+</html>

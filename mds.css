@@ -1,0 +1,234 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: cadetblue;
+}
+
+main {
+  width: 400px;
+  border: 3px solid black;
+  padding: 10px;
+  margin-top: 100px;
+  background-color: goldenrod;
+}
+
+section {
+  height: 30px;
+  width: 100%;
+}
+
+/*________________ Text Field ________________*/
+
+.mds-text-field {
+height: 55px;
+}
+
+.mds-text-field__input {
+height: 100%;
+width: 100%;
+font-size: 110%;
+border-bottom: 1px solid purple;
+border: none;
+padding: 20px;
+box-sizing: border-box;
+}
+
+.mds-text-field__input:focus + .mds-text-field__input--underline {
+  transform: scale(1);
+}
+
+.mds-text-field__input--underline {
+height: 6px;
+width: 400px;
+background-color: purple;
+margin-top: -6px;
+position: absolute;
+transform: scale(0, 1);
+transition: all 0.5s linear;
+}
+
+.mds-text-field__label {
+  font-size: 20px;
+  margin-top: -40px;
+  margin-left: 20px;
+  position: absolute;
+  transition: .9s ease;
+}
+
+.mds-text-field__label--active { 
+  font-size: 14px;
+  margin-top: -50px;
+  margin-left: 10px;
+  color: purple;
+  position: absolute;
+  transition: .9s ease;
+}
+
+/*________________ Text Field ________________*/
+
+/*________________ Switch ________________*/
+
+.mds-switch__label {
+  width: 40px;
+  height: 15px;
+  display: block;
+  position: absolute;
+}
+
+.mds-switch__slider {
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: grey;
+  border-radius: 35px;
+  position: absolute;
+  transition: .6s;
+  -webkit-transition: .6s;
+}
+
+.mds-switch__slider:before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  bottom: -3px;
+  background-color: white;
+  border-radius: 75%;
+  position: absolute;
+  transition: .6s;
+  -webkit-transition: .6s;
+}
+
+.mds-switch__checkbox:checked + .mds-switch__slider {
+  background-color: purple;
+}
+
+.mds-switch__checkbox:checked + .mds-switch__slider:before {
+  -webkit-transform: translateX(25px);
+  transform: translateX(25px);
+  background-color: purple;
+}
+
+.mds-switch__checkbox:checked:disabled + .mds-switch__slider::before {  /* Disable function */
+  background-color: white;
+}
+
+.mds-switch__checkbox:disabled + .mds-switch__slider {  /* Disable function */
+  background-color: grey;
+}
+
+/*________________ Switch ________________*/
+
+/*________________ Check box ________________*/
+
+.mds-checkbox {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+}
+
+  .mds-checkbox__span {
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  position: absolute;
+}
+
+ .mds-checkbox__input:checked ~ .mds-checkbox__span {
+  background-color: purple;
+}
+
+.mds-checkbox__span:after {
+  content: "";
+  position: absolute;
+}
+
+.mds-checkbox__input:checked ~ .mds-checkbox__span:after {
+  display: block;
+}
+
+.mds-checkbox .mds-checkbox__span:after {
+  top: 7px;
+  left: 10px;
+  height: 10px;
+  width: 7px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.mds-checkbox__input:checked:disabled ~ .mds-checkbox__span { /* Disable function */
+  background: grey;
+}
+
+.mds-checkbox__input:disabled ~ .mds-checkbox__span { /* Disable function */
+  background: grey;
+}
+
+/*________________ Check box ________________*/
+
+/*________________ Radio buttons ________________*/
+
+.mds-radio {
+  cursor: pointer;
+  position: relative;
+}
+
+.mds-radio__input {
+  opacity: 0;
+}
+
+.mds-radio__span {
+  width: 26px;
+  height: 26px;
+  left: 0;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid purple;
+  position: absolute;
+}
+
+.mds-radio__span:after {
+  content: "";  
+  position: relative;
+}
+
+.mds-radio__input:checked ~ .mds-radio__span:after {
+  display: inline-block;
+}
+
+.mds-radio .mds-radio__span:after {
+  width: 20px;
+  height: 20px;
+  background: purple;
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+}
+
+.mds-radio .mds-radio__input:disabled ~ .mds-radio__span {  /* Disable function */
+  border: 2px solid grey;
+}
+.mds-radio .mds-radio__input:disabled ~ .mds-radio__span:after {  /* Disable function */
+  background: grey;
+}
+
+/*________________ Radio buttons ________________*/
+
+/*________________ Buttons ________________*/
+
+button {
+  font-size: 20px;
+  background-color: purple;
+  color: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/*________________ Buttons ________________*/
